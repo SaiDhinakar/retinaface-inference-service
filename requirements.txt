@@ -1,0 +1,11 @@
+numpy
+opencv-python-headless
+fastapi[standard]
+uvicorn[standard]
+pydantic
+torchvision
+opencv-python
+retina-face
+tf-keras
+sqlalchemy
+aiosqlite

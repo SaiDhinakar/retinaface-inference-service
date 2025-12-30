@@ -1,0 +1,23 @@
+[project]
+name = "retinaface-inference-service"
+version = "0.1.0"
+description = "Production-grade RetinaFace face detection inference service using OpenVINO and FastAPI/gRPC"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy>=1.23",
+    "opencv-python-headless>=4.8",
+    "openvino>=2023.3",
+    "fastapi[standard]>=0.110",
+    "uvicorn[standard]>=0.27",
+    "pydantic>=2.6",
+    "torchvision>=0.24.1",
+    "opencv-python>=4.11.0.86",
+    "retina-face>=0.0.17",
+    "tf-keras>=2.20.1",
+    "matplotlib>=3.10.8",
+    "sqlalchemy>=2.0",
+    "aiosqlite>=0.19",
+]
+
