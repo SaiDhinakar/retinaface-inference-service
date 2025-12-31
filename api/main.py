@@ -6,6 +6,11 @@ import cv2
 import numpy as np
 import base64
 import time
+
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 from runtime.detector import detect_faces
 from utils.device import get_device
 from database import init_db
