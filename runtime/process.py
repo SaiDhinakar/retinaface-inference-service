@@ -30,5 +30,5 @@ def postprocess_image(img, bboxes, resolution):
     for bbox in bboxes:
         x1, y1, x2, y2 = bbox
         cv2.rectangle(annotated_img, (x1, y1), (x2, y2), (0, 255, 0))
-    annotated_img = cv2.resize(annotated_img, (resolution[1], resolution[0]))
+    # annotated_img = cv2.resize(annotated_img, (resolution[1], resolution[0]))
     return annotated_img

@@ -17,8 +17,8 @@ def detect_faces(img: UInt8DType, conf_thresh=float(os.getenv("CONFIDENCE_THRESH
         raise ValueError("Image not found or invalid path")
     
     resolution = img.shape[:2]
-    img = preprocess_image(img)
-    logger.debug(f"Image preprocessed, resolution: {resolution}")
+    # img = preprocess_image(img)
+    # logger.debug(f"Image preprocessed, resolution: {resolution}")
 
     # Run detector (threshold controls minimum confidence)
     detections = RetinaFace.detect_faces(img, threshold=conf_thresh)
