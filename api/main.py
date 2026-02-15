@@ -136,7 +136,7 @@ async def detect_faces_from_image(request: Request):
     )
 
     return {
-        "annotated_image": base64.b64encode(
+        "annotated_image": None if detections["annotated_img"] is None else base64.b64encode(
             cv2.imencode(".jpg", detections["annotated_img"])[1]
         ).decode(),
         "faces": faces_out

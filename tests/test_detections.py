@@ -25,7 +25,7 @@ def test_detections_endpoint():
 
     # save the resulting annotated image for manual inspection
     annotated_img_data = base64.b64decode(data["annotated_image"])
-    with open("annotated_test_output.jpg", "wb") as f:
+    with open("annotated_test_output_.jpg", "wb") as f:
         f.write(annotated_img_data)
 
 
