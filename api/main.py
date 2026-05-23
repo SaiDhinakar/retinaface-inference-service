@@ -16,14 +16,18 @@ from utils.device import get_device
 from database import init_db
 from database.repository import save_runtime_metric
 from api.schema import Face, BoundingBox, FaceDetectionResponse
+from contextlib import asynccontextmanager
+from fastapi import FastAPI
 
-# Initialize database
-import asyncio
-asyncio.run(init_db.create_tables())
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await init_db.create_tables()
+    yield
 
 app = FastAPI(
     title="Face Detection Service",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 # -------- HEALTH CHECK ----------
